@@ -1,0 +1,24 @@
+authenticate_service_url: https://preview-one.carparking.jp
+cookie_secret: KJ1tcIq+1IPbbVcRwMQg7rrd+fc5y2jVPFeoa0F03R4=
+cookie_domain: .preview-one.carparking.jp
+cookie_name: __staging_carparking_one
+shared_secret: j8fbvFlfhClP68T4vu8+T/OjByys6O3ltwWQZU2VPuM=
+idp_provider: auth0
+idp_provider_url: https://staging-one-carparking.jp.auth0.com
+idp_client_id: g02SF6CkMJ8bny79vRhgu8JO1Xpsktbv
+pass_idp_headers: true
+idp_scope: oidc,profile,email
+idp_client_secret: W46sIKvaEuJxtn3k1S4Rz35er-RssgPO-l8Z2mWzQrdlaFwRuY1mbwjx6bl7otRA
+default_upstream_timeout: 9000s
+jwt_claims_headers: email,groups,user,permissions,nickname
+signing_key: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUpBR00ybWlYeVc1dUpNWERjL05FN3YzTHVwcjFmNnA3cFllWXp3TnRTVHBvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFUE9rK2dRUXNXTlprUUgrYStNRklvZ0NOejZMemhOVGVQcitObmxFSisvUWJlYWFYTk44LwpaVkgxVTBMck1GV2ppcmR4Y0t4U2tvd3EyWXBUNDkvMHl3PT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=
+
+# policy:
+- from: https://api.preview-one.carparking.jp
+  to: https://staging-carparking-one-api-6fs6h4nfza-an.a.run.app
+  allowed_idp_claims:
+      iss:
+        - https://staging-one-carparking.jp.auth0.com/
+  cors_allow_preflight: true
+  pass_identity_headers: true
+  enable_google_cloud_serverless_authentication: true
