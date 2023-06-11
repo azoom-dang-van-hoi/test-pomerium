@@ -58,7 +58,7 @@ deps-release: get-envoy ## Install release dependencies
 	@cd /tmp; GO111MODULE=on $(GO) get github.com/goreleaser/goreleaser@${GORELEASER_VERSION}
 
 .PHONY: build-deps
-build-deps: deps-build deps-release
+build-deps: deps-build
 	@echo "==> $@"
 
 .PHONY: docs
