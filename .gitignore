@@ -87,6 +87,5 @@ docs/.vuepress/dist/
 !.pre-commit-config.yaml
 
 .service-accounts
-
+config.yaml
 /bazel-*
-internal/envoy/files/
